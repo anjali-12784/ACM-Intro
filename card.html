@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ACM Student Chapter Card</title>
+
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #cacdce, #e5ecef, #ebf1f3);
+    font-family: "Poppins", sans-serif;
+  }
+
+  .card {
+    width: 370px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: all 0.8s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Header image */
+  .card-header {
+    height: 160px;
+    background: url("https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1400&auto=format&fit=crop")
+      center/cover no-repeat;
+    position: relative;
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(92, 138, 190, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .overlay img {
+    width: 90px;
+    height: 90px;
+    background: #fcf9f9;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgba(119, 66, 66, 0.25);
+  }
+
+  /* Content */
+  .card-body {
+    padding: 22px;
+    text-align: center;
+  }
+
+  .card-body h2 {
+    margin: 10px 0 6px;
+    font-size: 22px;
+    color: #203a43;
+    font-weight: 700;
+  }
+
+  .card-body h3 {
+    margin: 0;
+    font-size: 15px;
+    color: #0072ff;
+    letter-spacing: 0.6px;
+  }
+
+  .card-body p {
+    margin-top: 16px;
+    font-size: 14px;
+    color: #444;
+    line-height: 1.7;
+  }
+
+  /* People image */
+  .people {
+    margin-top: 15px;
+  }
+
+  .people img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+
+  /* Footer */
+  .card-footer {
+    padding: 18px 22px 24px;
+    text-align: center;
+  }
+
+  .btn {
+    background: linear-gradient(135deg, #0072ff, #00c6ff);
+    color: #fff;
+    padding: 10px 28px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+
+  .btn:hover {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    box-shadow: 0 5px 15px rgba(0,114,255,0.3);
+    transform: translateY(-2px);
+  }
+
+  .social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  .social a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #0072ff;
+    transition: 0.3s;
+  }
+
+  .social a:hover {
+    color: #00c6ff;
+    transform: scale(1.15);
+  }
+
+  @media (max-width: 420px) {
+    .card { width: 90%; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="overlay">
+        <img src="https://sscbs.du.ac.in/wp-content/uploads/2024/04/ACM-logo.png">
+      </div>
+    </div>
+
+    <div class="card-body">
+      <h2>ACM Student Chapter</h2>
+      <h3>Building a Culture of Innovation</h3>
+      <p>
+        The ACM Chapter at SSCBS brings together students passionate about
+        <b>technology, coding, and creativity</b>.  
+         Hosts hands-on workshops, hackathons, and mentorship programs to help
+        students grow as innovators and leaders.
+      </p>
+
+      <div class="social">
+        <a href="#" title="Website">🌐</a>
+        <a href="#" title="Instagram">📸</a>
+        <a href="#" title="LinkedIn">💼</a>
+      </div>
+    </div>
+
+    <div class="card-footer">
+      <button class="btn">Join the Chapter</button>
+    </div>
+  </div>
+
+</body>
+</html>
